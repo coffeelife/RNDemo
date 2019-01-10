@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
   View,
   Image,
@@ -7,20 +7,20 @@ import {
   StyleSheet,
   StatusBar,
   Dimensions
-} from 'react-native'
-import Swiper from 'react-native-swiper'
+} from "react-native";
+import Swiper from "react-native-swiper";
 
 //取得屏幕的宽高Dimensions
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get("window");
 
 export default class Main extends Component {
   static navigationOptions = ({ navigation }) => ({
     header: null
-  })
+  });
 
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   render() {
@@ -36,20 +36,22 @@ export default class Main extends Component {
           paginationStyle={styles.paginationStyle}
         >
           <View style={[styles.swipercon, styles.swipercon1]}>
-            <Text style={styles.swipertext}>内容1</Text>
+            <Image
+              style={styles.swiperImg}
+              source={require("../images/1.jpg")}
+            />
+            {/* <Text style={styles.swipertext}>内容</Text> */}
           </View>
           <View style={[styles.swipercon, styles.swipercon2]}>
-            <Text style={styles.swipertext}>内容2</Text>
-          </View>
-          <View style={[styles.swipercon, styles.swipercon3]}>
-            <Text style={styles.swipertext}>内容3</Text>
-          </View>
-          <View style={[styles.swipercon, styles.swipercon4]}>
-            <Text style={styles.swipertext}>内容4</Text>
+            <Image
+              style={styles.swiperImg}
+              source={require("../images/1.jpg")}
+            />
+            {/* <Text style={styles.swipertext}>内容</Text> */}
           </View>
         </Swiper>
       </View>
-    )
+    );
   }
 }
 
@@ -62,34 +64,38 @@ const styles = StyleSheet.create({
   },
   swipercon: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    justifyContent: "center",
+    alignItems: "center"
   },
   swipertext: {
-    color: 'white'
+    color: "white"
+  },
+  swiperImg: {
+    flex: 1,
+    backgroundColor: "#ededed"
   },
   swipercon1: {
-    backgroundColor: 'red'
+    backgroundColor: "#00ffff"
   },
   swipercon2: {
-    backgroundColor: 'black'
+    backgroundColor: "#00ff00"
   },
   swipercon3: {
-    backgroundColor: 'yellow'
+    backgroundColor: "#0000ff"
   },
   swipercon4: {
-    backgroundColor: 'green'
+    backgroundColor: "#ffff00"
   },
   dot: {
     width: 10,
     height: 1.5,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     margin: 3
   },
   activeDot: {
     width: 10,
     height: 1.5,
-    backgroundColor: '#ffffffaa',
+    backgroundColor: "#ffffffaa",
     margin: 3
   },
   paginationStyle: {
@@ -97,4 +103,4 @@ const styles = StyleSheet.create({
     right: 10,
     left: null
   }
-})
+});
