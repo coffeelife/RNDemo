@@ -5,16 +5,20 @@ import {
   createBottomTabNavigator,
   createAppContainer
 } from 'react-navigation'
-import Details from './main/menu/Details'
-import MainPage from './main/Main'
-import TaskPage from './task/Task'
-import FeedbackPage from './feedback/Feedback'
-import MePage from './me/Me'
+import Details from './moudle/main/menu/Details'
+import MainPage from './moudle/main/Main'
+import TaskPage from './moudle/task/Task'
+import FeedbackPage from './moudle/feedback/Feedback'
+import MePage from './moudle/me/Me'
 
 export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {}
+  }
+
+  componentWillMount() {
+
   }
 
   render() {

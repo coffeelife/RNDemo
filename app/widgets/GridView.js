@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
     item: {
         flex: 1,
         padding: 10,
-        backgroundColor: '#8f8',
+        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center'
     },
     itemText: {
-        color: '#fff',
+        color: '#666',
         fontSize: 12
     },
     icon: {
