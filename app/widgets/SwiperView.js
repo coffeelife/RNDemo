@@ -35,7 +35,7 @@ export default class Main extends Component {
           activeDot={<View style={styles.activeDot} />}
           paginationStyle={styles.paginationStyle}
         >
-          <View style={styles.swipercon}>
+          <View key= {0} style={styles.swipercon}>
             <Image
               resizeMode="cover"
               style={styles.swiperImg}
@@ -43,7 +43,7 @@ export default class Main extends Component {
             />
             {/* <Text style={styles.swipertext}>内容</Text> */}
           </View>
-          <View style={styles.swipercon}>
+          <View key= {1} style={styles.swipercon}>
             <Image
               resizeMode="cover"
               style={styles.swiperImg}
@@ -51,7 +51,7 @@ export default class Main extends Component {
             />
             {/* <Text style={styles.swipertext}>内容</Text> */}
           </View>
-          <View style={styles.swipercon}>
+          <View key= {2} style={styles.swipercon}>
             <Image
               resizeMode="cover"
               style={styles.swiperImg}
@@ -59,7 +59,7 @@ export default class Main extends Component {
             />
             {/* <Text style={styles.swipertext}>内容</Text> */}
           </View>
-          <View style={styles.swipercon}>
+          <View key= {3} style={styles.swipercon}>
             <Image
               resizeMode="cover"
               style={styles.swiperImg}

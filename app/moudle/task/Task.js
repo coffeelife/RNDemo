@@ -1,5 +1,16 @@
 import React, { Component } from 'react'
-import { View, Image, Text, StyleSheet, StatusBar } from 'react-native'
+import {
+  View,
+  Image,
+  Text,
+  StyleSheet,
+  StatusBar,
+  FlatList
+} from 'react-native'
+import Common from '../../common/index'
+import Util from '../../util/index'
+
+const dataSource = [{ title: '菜单1' }, { title: '菜单2' }, { title: '菜单3' }]
 
 export default class Main extends Component {
   constructor(props) {
@@ -8,7 +19,7 @@ export default class Main extends Component {
   }
   render() {
     return (
-      <View style={StyleSheets.container}>
+      <View style={styles.container}>
         <StatusBar
           backgroundColor="#00000000"
           translucent={true}
@@ -16,16 +27,48 @@ export default class Main extends Component {
           barStyle="dark-content"
           animated={true}
         />
-        <Text>任务</Text>
+        <View style={styles.listCon}>
+          <FlatList
+            style={styles.list}
+            data={dataSource}
+            keyExtractor={this._keyExtractor}
+            renderItem={this._renderCell}
+          />
+        </View>
+      </View>
+    )
+  }
+
+  _keyExtractor = (item, index) => {
+    return index
+  }
+
+  _renderCell = (item, index) => {
+    return (
+      <View style={styles.itemCell}>
+        <Text style={styles.itemCellText}>{item.title} {index}</Text>
       </View>
     )
   }
 }
 
-const StyleSheets = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
+    flex: 1
+  },
+  listCon: {
+    flex: 1
+  },
+  list: {
+    marginTop: StatusBar.currentHeight,
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    backgroundColor:'#000'
+  },
+  itemCell: {
+    flex: 1
+  },
+  itemCellText: {
+    fontSize: 12,
+    color: '#333'
   }
 })
