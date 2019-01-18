@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import {
   View,
   Image,
@@ -8,22 +8,22 @@ import {
   StatusBar,
   Dimensions,
   ScrollView
-} from 'react-native'
-import Details from './menu/Details'
-import Swiper from '../../widgets/SwiperView'
-import GridView from '../../widgets/GridView'
+} from "react-native";
+import Details from "./menu/Details";
+import Swiper from "../../widgets/SwiperView";
+import GridView from "../../widgets/GridView";
 
 //取得屏幕的宽高Dimensions
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get("window");
 
 export default class Main extends Component {
   static navigationOptions = ({ navigation }) => ({
     header: null
-  })
+  });
 
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   render() {
@@ -52,49 +52,49 @@ export default class Main extends Component {
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
             <Button
               style={styles.btn}
               title="详情"
-              onPress={() => this.props.navigation.navigate('Details')}
+              onPress={() => this.props.navigation.navigate("Details")}
             />
           </View>
         </ScrollView>
       </View>
-    )
+    );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f8f8'
+    backgroundColor: "#f8f8f8"
   },
   scrollview: {
     flex: 1
@@ -109,4 +109,4 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   btn: {}
-})
+});
